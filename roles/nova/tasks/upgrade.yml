@@ -1,0 +1,22 @@
+---
+- name: start container
+  mymodule:
+    action: "start_container"
+    name: "{{ name }}"
+    image: "{{ image }}"
+    graceful: "{{ graceful }}"
+    graceful_timeout: "{{ graceful_timeout }}"
+    graceful_signal: "{{ graceful_signal }}"
+
+- name: remove container
+  mymodule:
+    action: "remove_container"
+    name: "{{ name }}-old"
+    graceful: "{{ graceful }}"
+    graceful_timeout: "{{ graceful_timeout }}"
+    graceful_signal: "{{ graceful_signal }}"
+  async: "{{ async_time }}"
+  poll: "{{ poll_time }}"
+
+- name: sighup container
+  command: docker kill -s HUP "{{ name }}"

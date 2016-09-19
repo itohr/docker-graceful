@@ -1,0 +1,9 @@
+---
+- name: remove container
+  mymodule:
+    action: "remove_container"
+    name: "{{ name }}"
+    graceful: "{{ graceful }}"
+    graceful_timeout: "{{ graceful_timeout }}"
+    graceful_signal: "{{ graceful_signal }}"
+

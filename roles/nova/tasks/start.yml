@@ -1,0 +1,13 @@
+---
+- name: start container
+  mymodule:
+    action: "start_container"
+    name: "{{ name }}"
+    image: "{{ image }}"
+    graceful: "{{ graceful }}"
+    graceful_timeout: "{{ graceful_timeout }}"
+    graceful_signal: "{{ graceful_signal }}"
+
+- name: sleep 1
+  command: sleep 1
+  when: not graceful | bool

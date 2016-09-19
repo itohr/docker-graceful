@@ -1,0 +1,9 @@
+graceful: "False"
+graceful_timeout: 60
+graceful_signal: "SIGTERM"
+
+async_time: 20
+poll_time: 1
+
+name: "loop"
+image: "loop:1.1"

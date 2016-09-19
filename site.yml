@@ -1,0 +1,6 @@
+- hosts:
+    -  compute
+  roles:
+    - { role: nova,
+        tags: nova }
+  

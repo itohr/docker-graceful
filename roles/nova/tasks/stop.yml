@@ -1,0 +1,9 @@
+---
+- name: stop container
+  mymodule:
+    action: "stop_container"
+    name: "{{ name }}"
+    graceful: "{{ graceful }}"
+    graceful_timeout: "{{ graceful_timeout }}"
+    graceful_signal: "{{ graceful_signal }}"
+
