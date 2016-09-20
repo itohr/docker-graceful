@@ -6,4 +6,4 @@ async_time: 20
 poll_time: 1
 
 name: "loop"
-image: "loop:1.1"
+image: "loop:1.0"
